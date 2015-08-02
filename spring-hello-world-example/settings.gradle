@@ -1,0 +1,3 @@
+rootProject.name = 'spring-hello-world-example'
+include 'spring-hello-world-example-web'
+

@@ -1,0 +1,37 @@
+group 'com.ac-techsolutions'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+//The Groovy plugin extends the Java plugin to add support for Groovy projects
+apply plugin: 'groovy'
+/**
+ * The Eclipse plugins generate files that are used by the Eclipse IDE,
+ * thus making it possible to import the project into Eclipse
+ */
+apply plugin: 'eclipse'
+/**
+ * The IDEA plugin generates files that are used by IntelliJ IDEA, thus making it possible to open the project from IDEA
+ */
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+    compile 'org.codehaus.groovy:groovy-all:2.2.0'
+    compile 'org.springframework:spring-context:4.0.5.RELEASE'
+}
+
+/**
+ * Executes JUnit (3.8.x or 4.x) or TestNG tests.
+ * Test are always run in (one or more) separate JVMs.
+ */
+test {
+    // Allows to set options related to which test events are logged to the console, and on which detail level.
+    testLogging{
+    // Set<TestLogEvent> events
+        events 'started', 'passed'
+    }
+}

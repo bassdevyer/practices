@@ -1,0 +1,24 @@
+group 'ec.torres'
+version '1.0-SNAPSHOT'
+
+// Binary plugins are classes that implement the Plugin interface and adopt a programmatic approach to manipulating the build.
+apply plugin: 'application'
+// The Application plugin facilitates creating an executable JVM application.
+
+//The only mandatory configuration for the plugin is the specification of the main class (i.e. entry point) of the application.
+mainClassName = System.getProperty("mainClass")
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repo.spring.io/libs-snapshot"
+        }
+    maven { url "http://repo.spring.io/milestone" }
+    maven { url "http://repo.spring.io/libs-release" }
+}
+
+dependencies {
+    //compile 'org.springframework:spring-context:4.0.5.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web:1.0.2.RELEASE")
+}

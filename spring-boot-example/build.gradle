@@ -1,0 +1,19 @@
+group 'com.ac-techsolutions'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+
+mainClassName = System.getProperty("mainClass")
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repo.spring.io/libs-snapshot"
+    }
+    maven { url 'http://repo.spring.io/milestone' }
+    maven { url 'http://repo.spring.io/libs-release' }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.0.2.RELEASE")
+}
