@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.apress.isf.spring.test.MyDocumentsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-03T21:22:26" hostname="seymourdiera" time="0.393">
+  <properties/>
+  <testcase name="testAll" classname="com.apress.isf.spring.test.MyDocumentsTest" time="0.393"/>
+  <system-out><![CDATA[2015-08-03 16:22:27 DEBUG SearchEngineService:26 - ServiceSearchEngine created: com.apress.isf.spring.service.SearchEngineService@1fbc7276
+2015-08-03 16:22:27 DEBUG SearchEngineService:35 - Document DAO set: com.apress.isf.spring.data.DocumentRepository@3bfd8086
+2015-08-03 16:22:27 DEBUG SearchEngineService:26 - ServiceSearchEngine created: com.apress.isf.spring.service.SearchEngineService@54dce138
+2015-08-03 16:22:27 DEBUG SearchEngineService:35 - Document DAO set: com.apress.isf.spring.data.DocumentRepository@1d06645b
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

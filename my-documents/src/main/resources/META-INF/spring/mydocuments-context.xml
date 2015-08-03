@@ -21,11 +21,11 @@
 
        <!-- New implementation of context, being created the new beans -->
 
-       <bean id="engine" class="com.apress.isf.spring.service.SearchEngineService">
+       <bean id="engine" class="com.apress.isf.spring.service.SearchEngineService" scope="prototype">
               <property name="documentDAO" ref="documentDAO"/>
        </bean>
 
-       <bean id="documentDAO" class="com.apress.isf.spring.data.DocumentRepository">
+       <bean id="documentDAO" class="com.apress.isf.spring.data.DocumentRepository" scope="prototype">
               <property name="document1" ref="document1"/>
               <property name="document2" ref="document2"/>
               <property name="document3" ref="document3"/>
@@ -41,6 +41,7 @@
        <bean id="document2" class="com.apress.isf.java.model.Document">
               <property name="name" value="Sample Contract"/>
               <property name="type">
+                     <!-- Embedding a new bean as a value-->
                      <bean id="pdfType" class="com.apress.isf.java.model.Type">
                             <property name="name" value="PDF"/>
                             <property name="desc" value="Portable Document Format"/>
